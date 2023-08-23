@@ -1,6 +1,6 @@
 {
-  "name": "@ronchalant/react-loading-overlay",
-  "version": "1.0.2",
+  "name": "react-loading-overlay-nextgen",
+  "version": "1.1.0",
   "description": "Loading overlays with fade, spinner, message support. Updated for compatibility with React 17. Forked from https://github.com/derrickpelletier/react-loading-overlay - which does not appear to be maintained at this point.",
   "licence": "MIT",
   "keywords": [
@@ -26,17 +26,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ronchalant/react-loading-overlay.git"
+    "url": "git+https://github.com/TerrenceMiao/react-loading-overlay-nextgen"
   },
   "author": {
     "name": "Derrick Pelletier",
     "email": "derrick@dpelletier.com",
     "url": "http://dpelletier.com"
   },
+  "contributors": [
+    {
+      "name": "Terrence Miao",
+      "email": "terrence.miao@gmail.com",
+      "url": "https://github.com/TerrenceMiao"
+    }
+  ],
   "bugs": {
-    "url": "https://github.com/ronchalant/react-loading-overlay/issues"
+    "url": "https://github.com/rTerrenceMiao/react-loading-overlay-nextgen/issues"
   },
-  "homepage": "https://github.com/ronchalant/react-loading-overlay#readme",
+  "homepage": "https://github.com/TerrenceMiao/react-loading-overlay-nextgen#readme",
   "dependencies": {
     "emotion": "^10.0.1",
     "prop-types": "^15.6.2",
@@ -57,7 +64,6 @@
     "babel-loader": "^8.0.4",
     "jest": "^23.6.0",
     "react": "^17.0.2",
-    "react-addons-test-utils": "^15.6.2",
     "react-dom": "^17.0.2",
     "react-testing-library": "^5.3.1",
     "regenerator-runtime": "^0.13.1",
