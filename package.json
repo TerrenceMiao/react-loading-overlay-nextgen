@@ -1,6 +1,6 @@
 {
   "name": "react-loading-overlay-nextgen",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Loading overlays with fade, spinner, message support. Updated for compatibility with React 17. Forked from https://github.com/derrickpelletier/react-loading-overlay - which does not appear to be maintained at this point.",
   "licence": "MIT",
   "keywords": [
