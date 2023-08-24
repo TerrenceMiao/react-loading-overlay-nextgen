@@ -7,10 +7,11 @@ npm-debug.log
 dist
 
 # build
+.idea
 lib
 dist
-src/*.js
-__tests__/*.js
+src/**/*.js
+__tests__/**/*.js
 *.js.map
 *.d.ts
 *.test.tsx.snap
