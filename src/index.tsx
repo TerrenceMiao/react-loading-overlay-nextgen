@@ -58,15 +58,19 @@ export interface LoadingOverlayProps {
   children?: any;
 }
 
-class LoadingOverlay extends React.Component<LoadingOverlayProps> {
-  wrapper: any;
-  nodeRef: any;
-  state: any;
+export interface LoadingOverlayState {
+  overflowCSS: any;
+}
+
+class LoadingOverlay extends React.Component<
+  LoadingOverlayProps,
+  LoadingOverlayState
+> {
+  wrapper: any = createRef();
+  nodeRef: any = createRef();
 
   constructor(props: LoadingOverlayProps) {
     super(props);
-    this.wrapper = createRef();
-    this.nodeRef = createRef();
     this.state = { overflowCSS: {} };
   }
 
@@ -79,7 +83,7 @@ class LoadingOverlay extends React.Component<LoadingOverlayProps> {
       },
       {}
     );
-    this.state = { overflowCSS };
+    this.setState({ overflowCSS });
   }
 
   componentDidUpdate(prevProps: LoadingOverlayProps) {
@@ -116,7 +120,6 @@ class LoadingOverlay extends React.Component<LoadingOverlayProps> {
   };
 
   render() {
-    const { overflowCSS } = this.state;
     const {
       children,
       className,
@@ -133,7 +136,7 @@ class LoadingOverlay extends React.Component<LoadingOverlayProps> {
         ref={this.wrapper}
         className={this.cx(
           ["wrapper", active && "wrapper--active"],
-          css(this.getStyles("wrapper", active ? overflowCSS : {})),
+          css(this.getStyles("wrapper", active ? this.state.overflowCSS : {})),
           className
         )}
       >
