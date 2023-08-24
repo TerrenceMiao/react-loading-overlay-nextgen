@@ -5,3 +5,13 @@ lib
 umd
 npm-debug.log
 dist
+
+# build
+lib
+dist
+src/*.js
+__tests__/*.js
+*.js.map
+*.d.ts
+*.test.tsx.snap
+# src/*.js
