@@ -1,8 +1,8 @@
 var config = {
   mode: process.env.NODE_ENV,
-  entry: './src/LoadingOverlay.js',
+  entry: './src/index.js',
   output: {
-    library: 'LoadingOverlay',
+    library: 'index',
     libraryTarget: 'umd'
   },
   externals: {
@@ -17,6 +17,10 @@ var config = {
   },
   module: {
     rules: [
+      {
+        test: /\.ts?$/,
+        use: ['ts-loader']
+      },
       {
         test: /\.js$/,
         use: 'babel-loader'
