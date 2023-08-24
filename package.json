@@ -1,6 +1,6 @@
 {
   "name": "react-loading-overlay-nextgen",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Loading overlays with fade, spinner, message support. Updated for compatibility with React 17. Forked from https://github.com/derrickpelletier/react-loading-overlay - which does not appear to be maintained at this point.",
   "licence": "MIT",
   "keywords": [
@@ -14,10 +14,10 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "npm run build-cjs && npm run build-es6 && rimraf umd && npm run build-umd && npm run build-min",
-    "build-cjs": "tsc && rimraf lib && babel ./src --out-dir lib --copy-files",
-    "build-es6": "tsc && rimraf es6 && babel ./src --out-dir es6 --copy-files",
-    "build-umd": "tsc && babel ./src --out-dir umd --copy-files && webpack --mode=development src/index.js -o umd/index.js",
-    "build-min": "tsc && babel ./src --out-dir umd --copy-files && webpack --mode=production src/index.js -o umd/index.min.js",
+    "build-cjs": "tsc && rimraf lib && cpx 'src/**/*.{js,js.map,d.ts}' lib",
+    "build-es6": "tsc && rimraf es6 && cpx 'src/**/*.{js,js.map,d.ts}' es6",
+    "build-umd": "tsc && cpx 'src/**/*.{js,js.map,d.ts}' umd && webpack --mode=development src/index.js -o umd/index.js",
+    "build-min": "tsc && cpx 'src/**/*.{js,js.map,d.ts}' umd && webpack --mode=production src/index.js -o umd/index.min.js",
     "watch": "tsc -w",
     "storybook": "start-storybook -p 9001",
     "lint": "standard",
@@ -66,6 +66,7 @@
     "babel-eslint": "^10.0.1",
     "babel-jest": "^29.6.3",
     "babel-loader": "^8.0.4",
+    "cpx": "^1.5.0",
     "jest": "^29.6.3",
     "jsdom": "^22.1.0",
     "jsdom-global": "^3.0.2",
