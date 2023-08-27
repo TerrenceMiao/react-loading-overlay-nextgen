@@ -2,7 +2,7 @@
 // Project: https://github.com/derrickpelletier/react-loading-overlay
 // Definitions by: DefinitelyTyped <https://github.com/DefinitelyTyped>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-import { css, cx } from "emotion";
+import { css, cx } from "@emotion/css";
 import { CSSTransition } from "react-transition-group";
 
 import React, { createRef } from "react";
@@ -13,7 +13,7 @@ export type LoadingOverlayStyles = {
   content?: (base: React.CSSProperties) => React.CSSProperties;
   overlay?: (base: React.CSSProperties) => React.CSSProperties;
   spinner?: (base: React.CSSProperties) => React.CSSProperties;
-  wrapper?: (base: React.CSSProperties) => React.CSSProperties;
+  wrapper?: (base: React.CSSProperties, props?: any) => React.CSSProperties;
 };
 
 export interface LoadingOverlayProps {
@@ -98,8 +98,8 @@ class LoadingOverlay extends React.Component<
    */
   getStyles = (key: keyof LoadingOverlayStyles, providedState?: any) => {
     const base = STYLES[key](providedState, this.props);
-    const custom = this.props.styles ? this.props.styles[key] : {};
-    if (!custom) return base;
+    const custom = this.props.styles ? this.props.styles[key] : undefined;
+    if (!custom) { return base };
     return typeof custom === "function" ? custom(base, this.props) : custom;
   };
 

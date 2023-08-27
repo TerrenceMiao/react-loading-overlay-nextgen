@@ -10,9 +10,9 @@ dist
 .idea
 lib
 dist
+stories/LoadingOverlay
 src/**/*.js
 __tests__/**/*.js
 *.js.map
 *.d.ts
 *.test.tsx.snap
-# src/*.js
