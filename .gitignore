@@ -3,6 +3,7 @@ node_modules
 es6
 lib
 umd
+umd-min
 npm-debug.log
 dist
 
@@ -13,7 +14,7 @@ dist
 stories/LoadingOverlay
 storybook-static
 src/**/*.js
-__tests__/**/*.js
+test/**/*.js
 *.js.map
 *.d.ts
 *.test.tsx.snap

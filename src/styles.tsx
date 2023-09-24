@@ -24,7 +24,7 @@ const spinnerDash = keyframes`
   }
 `;
 
-export default {
+const STYLES = {
   wrapper: (state: any) => ({
     position: "relative",
     ...state,
@@ -78,3 +78,5 @@ export default {
     },
   }),
 };
+
+export default STYLES;

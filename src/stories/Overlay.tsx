@@ -1,9 +1,8 @@
 import { action } from "@storybook/addon-actions";
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 
-import LoadingOverlay, { LoadingOverlayProps } from "./LoadingOverlay";
+import LoadingOverlay, { LoadingOverlayProps } from "..";
 
 const wrapped = (
   <div style={{ padding: "20px", background: "#FFF" }}>
@@ -85,7 +84,7 @@ const StyledLoader = styled(FadeWrapper)`
   }
 `;
 
-export const Overlay = ({
+export default ({
   mode,
   active,
   spinner,
@@ -133,18 +132,4 @@ export const Overlay = ({
         </StyledLoader>
       );
   }
-};
-
-Overlay.propTypes = {
-  mode: PropTypes.number.isRequired,
-  active: PropTypes.bool,
-  spinner: PropTypes.oneOfType([PropTypes.bool, PropTypes.element]),
-  fadeSpeed: PropTypes.number,
-  text: PropTypes.string,
-  styles: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
-  classNamePrefix: PropTypes.string,
-};
-
-Overlay.defaultProps = {
-  mode: 1,
 };

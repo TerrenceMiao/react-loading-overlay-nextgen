@@ -1,4 +1,4 @@
-var config = {
+module.exports = {
   mode: process.env.NODE_ENV,
   entry: './src/index.js',
   output: {
@@ -18,15 +18,15 @@ var config = {
   module: {
     rules: [
       {
-        test: /\.ts?$/,
-        use: ['ts-loader']
+        test: /\.(ts|tsx)$/,
+        use: ['ts-loader'],
+        exclude: /node_modules/
       },
       {
         test: /\.js$/,
-        use: 'babel-loader'
+        use: ['babel-loader'],
+        exclude: /node_modules/
       }
     ]
   }
-}
-
-module.exports = config
+};
