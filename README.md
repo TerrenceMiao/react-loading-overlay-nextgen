@@ -1,8 +1,6 @@
-# React-Loading-Overlay
+# react-loading-overlay-nextgen
 
-[![npm version](https://badgen.net/npm/v/react-loading-overlay)](https://www.npmjs.com/package/react-loading-overlay)
-![minified + gzipped](https://badgen.net/bundlephobia/minzip/react-loading-overlay)
-[![downloads](https://badgen.net/npm/dw/react-loading-overlay)](https://www.npmjs.com/package/react-loading-overlay)
+**[Live Demo](https://terrencemiao.github.io/react-loading-overlay-nextgen/storybook-static/?path=/docs/example-overlay--docs)**
 
 A customizable, simple loading overlay with spinner and transitions.
 
@@ -32,7 +30,7 @@ v1.x is a rewrite focused on flexibility. Customization is no longer driven by c
 Wrap your components in it and toggle the `active` prop as necessary.
 
 ```javascript
-import LoadingOverlay from 'react-loading-overlay';
+import LoadingOverlay from 'react-loading-overlay-nextgen';
 
 <LoadingOverlay
   active={isActive}
@@ -66,7 +64,7 @@ import LoadingOverlay from 'react-loading-overlay';
 
 Adding a custom spinner is super easy, here's an example:
 
-Acquire the spinner you want to use. Doesn't matter where you get it, as long as you're rendering a valid React node. It can be a custom svg in your codebase if you want. For this example let's use [`react-spinners`](https://www.npmjs.com/package/react-spinners). 
+Acquire the spinner you want to use. Doesn't matter where you get it, as long as you're rendering a valid React node. It can be a custom svg in your codebase if you want. For this example let's use [`react-spinners`](https://www.npmjs.com/package/react-spinners).
 
 ```
 npm install react-spinners
@@ -257,4 +255,3 @@ Simply include the nested elements in your style definition:
   ```
   </p>
   </details>
-

@@ -11,6 +11,7 @@ dist
 lib
 dist
 stories/LoadingOverlay
+storybook-static
 src/**/*.js
 __tests__/**/*.js
 *.js.map
