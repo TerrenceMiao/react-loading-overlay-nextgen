@@ -1,6 +1,6 @@
 # react-loading-overlay-nextgen
 
-**[Live Demo](https://terrencemiao.github.io/react-loading-overlay-nextgen/storybook-static/?path=/docs/example-overlay--docs)**
+**[Live Demo](https://terrencemiao.github.io/react-loading-overlay-nextgen/storybook-static/?path=/docs/loading-overlay--docs)**
 
 A customizable, simple loading overlay with spinner and transitions.
 
@@ -73,7 +73,7 @@ npm install react-spinners
 Then simply provide it to the spinner prop for your loader.
 
 ```javascript
-import LoadingOverlay from 'react-loading-overlay'
+import LoadingOverlay from 'react-loading-overlay-nextgen'
 import BounceLoader from 'react-spinners/BounceLoader'
 
 export default function MyLoader({ active, children }) {
